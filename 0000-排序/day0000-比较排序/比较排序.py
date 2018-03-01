@@ -9,8 +9,6 @@
 # import something
 from random import randint
 
-# 梳理排序，是基于冒泡排序的一种改进：
-
 # 冒泡排序：
 my_list = []
 [my_list.append(randint(0, 100)) for x in range(10)]
@@ -22,3 +20,4 @@ for i in range(len(my_list)):
             my_list[j], my_list[j - 1] = my_list[j - 1], my_list[j]
 
 print(my_list)
+# 冒泡排序的特点就是调整相邻两个对象的位置，每进行一次
