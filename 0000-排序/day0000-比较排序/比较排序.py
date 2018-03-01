@@ -16,9 +16,9 @@ my_list = []
 [my_list.append(randint(0, 100)) for x in range(10)]
 print(my_list)
 
-for i in range(1, len(my_list) - 1):
+for i in range(len(my_list)):
     for j in range(1, len(my_list) - i):
-        if my_list[j] > my_list[j + 1]:
-            my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
+        if my_list[j - 1] > my_list[j]:
+            my_list[j], my_list[j - 1] = my_list[j - 1], my_list[j]
 
 print(my_list)
