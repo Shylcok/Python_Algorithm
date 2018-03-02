@@ -14,7 +14,7 @@ from functools import wraps
 
 # 冒泡排序：
 my_list = []
-[my_list.append(randint(0, 1000)) for x in range(1000)]
+[my_list.append(randint(0, 100)) for x in range(1000)]
 print('原数据\n', my_list)
 
 
@@ -60,14 +60,15 @@ def comb_sort(num_list, flag=False, s=1.3):
     :param num_list:
     :return:
     """
-    j = len(num_list)-1
+    count = len(num_list)
+    j = count
     while (j > 1) or flag is True:
         i = 0
-        j = max(math.floor(j / s), 1)
+        j = max(math.floor(j / s), 0)
         flag = False
-        while i + j <= len(num_list)-1:
-            if num_list[i-1] > my_list[i + j-1]:
-                num_list[i - 1], num_list[i + j - 1] = num_list[i + j - 1], num_list[i - 1]
+        while i + j <= count-1:
+            if num_list[i] > my_list[i + j]:
+                num_list[i], num_list[i + j] = num_list[i + j], num_list[i]
                 flag = True
             i = i + 1
 
