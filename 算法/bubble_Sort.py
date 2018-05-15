@@ -3,7 +3,7 @@
 # @Time    : 0301
 # @Author  : Shylock
 # @Email   : JYFelt@163.com
-# @File    : 比较排序.py
+# @File    : bubble_Sort.py
 # @Software: PyCharm
 # ----------------------------------------------------
 # import something
